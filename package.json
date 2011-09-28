@@ -15,6 +15,9 @@
     "directories" : {
         "lib" : "."
     },
+    "devDependencies" : {
+        "browserify" : "1.5.x"
+    },
     "license" : "MIT",
     "author" : {
         "name" : "James Halliday",
