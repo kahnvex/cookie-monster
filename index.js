@@ -1,4 +1,6 @@
 var exports = module.exports = function (doc) {
+    if (!doc) doc = {};
+    if (typeof doc === 'string') doc = { cookie: doc };
     if (doc.cookie === undefined) doc.cookie = '';
     
     var self = {};
@@ -18,6 +20,7 @@ var exports = module.exports = function (doc) {
         if (opts.expires) s += '; expires=' + opts.expires;
         if (opts.path) s += '; path=' + escape(opts.path);
         doc.cookie = s;
+        return s;
     };
     return self;
 };
