@@ -1,4 +1,4 @@
-cookie-cutter
+cookie-monster
 =============
 
 Set and get cookies in the browser or in node with `document`.
@@ -6,7 +6,7 @@ Set and get cookies in the browser or in node with `document`.
 In your browser code with [browserify](github.com/substack/node-browserify):
 
 ````javascript
-var cookie = require('cookie-cutter');
+var cookie = require('cookie-monster');
 var times = parseInt(cookie.get('times'), 10) || 0;
 cookie.set('times', times + 1);
 ````
@@ -17,7 +17,7 @@ methods
 =======
 
 ````javascript
-var cookie = require('cookie-cutter');
+var cookie = require('cookie-monster');
 ````
 
 cookie(document)
