@@ -8,7 +8,7 @@ describe('cookie monster', function() {
 
   it('sets a cookie', function() {
     cookie.set('cookieKey', 'cookieVal');
-    document.cookie.should.equal('cookieKey=cookieVal');
+    document.cookie.should.contain('cookieKey=cookieVal');
   });
 
   it('gets a cookie', function() {
