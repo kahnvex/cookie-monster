@@ -7,7 +7,7 @@
     "url": "git://github.com/kahnjw/cookie-monster.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "karma start"
   },
   "main": "index.js",
   "keywords": [
@@ -21,7 +21,13 @@
     "email": "jarrod.kahn@gmail.com"
   },
   "devDependencies": {
+    "bindpolyfill": "0.0.0",
     "chai": "^1.9.2",
-    "mocha": "^1.21.5"
+    "karma": "^0.12.24",
+    "karma-browserifast": "^0.7.0",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-spec-reporter": "0.0.13"
   }
 }
