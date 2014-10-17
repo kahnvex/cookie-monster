@@ -66,3 +66,8 @@ license
 =======
 
 MIT/X11
+
+cookies
+=======
+
+![cookie-monster](http://i.giphy.com/EKUvB9uFnm2Xe.gif)
