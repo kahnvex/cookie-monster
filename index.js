@@ -1,3 +1,5 @@
+'use strict';
+
 var exports = module.exports = function (doc) {
   if (!doc) doc = {};
   if (typeof doc === 'string') doc = { cookie: doc };

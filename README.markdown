@@ -53,6 +53,15 @@ With [npm](http://npmjs.org) do:
 
     npm install cookie-monster
 
+test
+====
+
+With the console do
+
+```sh
+$ npm test
+```
+
 license
 =======
 
