@@ -1,20 +1,27 @@
 {
-    "name" : "cookie-monster",
-    "description" : "Browserify-compatible module to get and set cookies in the browser",
-    "version" : "0.0.1",
-    "repository" : {
-        "type" : "git",
-        "url" : "git://github.com/kahnjw/cookie-monster.git"
-    },
-    "main" : "index.js",
-    "keywords" : [
-        "cookie",
-        "browser",
-        "browserify"
-    ],
-    "license" : "MIT",
-    "author" : {
-        "name" : "Jarrod Kahn",
-        "email" : "jarrod.kahn@gmail.com"
-    }
+  "name": "cookie-monster",
+  "description": "Browserify-compatible module to get and set cookies in the browser",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kahnjw/cookie-monster.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "index.js",
+  "keywords": [
+    "cookie",
+    "browser",
+    "browserify"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Jarrod Kahn",
+    "email": "jarrod.kahn@gmail.com"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^1.21.5"
+  }
 }

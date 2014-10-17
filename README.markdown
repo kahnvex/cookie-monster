@@ -1,6 +1,8 @@
 cookie-monster
 =============
 
+[![Build Status](https://travis-ci.org/kahnjw/cookie-monster.png)](https://travis-ci.org/kahnjw/cookie-monster)
+
 Set and get cookies in the browser or in node with `document`.
 
 In your browser code with [browserify](github.com/substack/node-browserify):
@@ -47,7 +49,7 @@ install
 
 With [npm](http://npmjs.org) do:
 
-    npm install cookie-cutter
+    npm install cookie-monster
 
 license
 =======
