@@ -3,6 +3,8 @@ cookie-monster
 
 [![Build Status](https://travis-ci.org/kahnjw/cookie-monster.png)](https://travis-ci.org/kahnjw/cookie-monster)
 
+NOTE: cookie-monster is a fork of [cookie-cutter](https://www.npmjs.org/package/cookie-cutter) by substack (James Halliday), which seems to have gone stale.
+
 Set and get cookies in the browser or in node with `document`.
 
 In your browser code with [browserify](github.com/substack/node-browserify):
