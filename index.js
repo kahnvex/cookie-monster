@@ -32,6 +32,10 @@ var exports = module.exports = function (doc) {
       newCookie += '; domain=' + opts.domain;
     }
 
+    if (opts.secure) {
+      newCookie += '; secure'
+    }
+
     doc.cookie = newCookie;
 
     return newCookie;
