@@ -33,7 +33,7 @@ var exports = module.exports = function (doc) {
     }
 
     if (opts.secure) {
-      newCookie += '; secure'
+      newCookie += '; secure';
     }
 
     doc.cookie = newCookie;
