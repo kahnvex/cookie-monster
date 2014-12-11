@@ -1,6 +1,6 @@
 'use strict';
 
-var exports = module.exports = function (doc) {
+exports = module.exports = function (doc) {
   if (!doc) doc = {};
   if (typeof doc === 'string') doc = { cookie: doc };
   if (doc.cookie === undefined) doc.cookie = '';
