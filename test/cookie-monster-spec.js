@@ -15,4 +15,9 @@ describe('cookie monster', function() {
     document.cookie = 'dumby=mcdumberson;';
     cookie.get('dumby').should.equal('mcdumberson');
   });
+
+  it('sets and gets cookie with `=` in value', function () {
+    cookie.set('key', 'val=ue');
+    cookie.get('key').should.equal('val=ue');
+  });
 });

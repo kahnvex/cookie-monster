@@ -10,21 +10,21 @@ exports = module.exports = function (doc) {
     var cookiesSplat = doc.cookie.split(/;\s*/);
     for (var i = 0; i < cookiesSplat.length; i++) {
       var ps = cookiesSplat[i].split('=');
-      var k = unescape(ps[0]);
-      if (k === key) return unescape(ps[1]);
+      var k = decodeURIComponent(ps[0]);
+      if (k === key) return decodeURIComponent(ps[1]);
     }
   };
 
   self.set = function (key, value, opts) {
     if (!opts) opts = {};
-    var newCookie = escape(key) + '=' + escape(value);
+    var newCookie = encodeURIComponent(key) + '=' + encodeURIComponent(value);
 
     if (opts.expires){
       newCookie += '; expires=' + opts.expires;
     }
 
     if (opts.path) {
-      newCookie += '; path=' + escape(opts.path);
+      newCookie += '; path=' + opts.path;
     }
 
     if (opts.domain) {
