@@ -13,7 +13,6 @@ exports = module.exports = function (doc) {
       var k = unescape(ps[0]);
       if (k === key) return unescape(ps[1]);
     }
-    return undefined;
   };
 
   self.set = function (key, value, opts) {
