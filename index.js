@@ -19,19 +19,19 @@ exports = module.exports = function (doc) {
     if (!opts) opts = {};
     var newCookie = encodeURIComponent(key) + '=' + encodeURIComponent(value);
 
-    if (opts.expires){
+    if (opts.hasOwnProperty(expires)){
       newCookie += '; expires=' + opts.expires;
     }
 
-    if (opts.path) {
+    if (opts.hasOwnProperty(path)) {
       newCookie += '; path=' + opts.path;
     }
 
-    if (opts.domain) {
+    if (opts.hasOwnProperty(domain)) {
       newCookie += '; domain=' + opts.domain;
     }
 
-    if (opts.secure) {
+    if (opts.hasOwnProperty(secure)) {
       newCookie += '; secure';
     }
 
