@@ -7,9 +7,6 @@ var bake = function (doc){
 
   // Returning object
   var self = {
-    get length(){
-      return doc.cookie.split(/;\s*/).length;
-    },
     getItem: function (key){
       var cookiesSplat = doc.cookie.split(/;\s*/);
       for (var i = 0; i < cookiesSplat.length; i++) {
