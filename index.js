@@ -7,7 +7,10 @@ var bake = function (doc){
 
   // Returning object
   var self = {
-    get: function (key){
+    get length(){
+      return doc.cookie.split(/;\s*/).length;
+    },
+    getItem: function (key){
       var cookiesSplat = doc.cookie.split(/;\s*/);
       for (var i = 0; i < cookiesSplat.length; i++) {
         var ps = cookiesSplat[i].split('=');
@@ -15,7 +18,7 @@ var bake = function (doc){
         if (k === key) return decodeURIComponent(ps[1]);
       }
     },
-    set: function (key, value, opts){
+    setItem: function (key, value, opts){
       // Checks before we start
       if (typeof key !== 'string' || typeof value !== 'string') return false;
       if (!opts) opts = {};
@@ -29,6 +32,29 @@ var bake = function (doc){
 
       doc.cookie = newCookie;
       return newCookie;
+    },
+    removeItem: function (key){
+      doc.cookie = key + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      return true;
+    },
+    clear: function (){
+      var cookiesSplat = doc.cookie.split(/;\s*/);
+      for (var i = 0; i < cookiesSplat.length; i++) {
+        self.removeItem(decodeURIComponent(cookiesSplat[i].split('=')[0]));
+      }
+    },
+    // Legacy aliases
+    get: function (key){
+      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      return self.getItem(key);
+    },
+    set: function (key, value, opts){
+      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      return self.setItem(key, value, opts);
+    },
+    remove: function (key){
+      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      return self.removeItem(key);
     }
   };
 
