@@ -42,6 +42,7 @@ var bake = function (doc){
       for (var i = 0; i < cookiesSplat.length; i++) {
         self.removeItem(decodeURIComponent(cookiesSplat[i].split('=')[0]));
       }
+      return true;
     },
     // Legacy aliases
     get: function (key){
