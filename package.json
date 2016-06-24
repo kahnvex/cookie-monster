@@ -1,7 +1,7 @@
 {
   "name": "cookie-monster",
   "description": "Browserify-compatible module to get and set cookies in the browser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/kahnjw/cookie-monster.git"
@@ -22,13 +22,15 @@
   },
   "devDependencies": {
     "bindpolyfill": "0.0.0",
-    "chai": "^1.9.2",
-    "karma": "^0.12.24",
-    "karma-browserifast": "^0.7.0",
-    "karma-cli": "0.0.4",
-    "karma-mocha": "^0.1.9",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "karma-spec-reporter": "0.0.13",
-    "mocha": "^2.4.5"
+    "browserify": "^13.0.1",
+    "chai": "^3.5.0",
+    "karma": "^1.0.0",
+    "karma-browserify": "^5.0.5",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.0.1",
+    "karma-mocha-reporter": "^2.0.4",
+    "karma-phantomjs-launcher": "^1.0.1",
+    "mocha": "^2.5.3",
+    "watchify": "^3.7.0"
   }
 }

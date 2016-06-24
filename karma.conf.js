@@ -1,25 +1,27 @@
 'use strict';
 
-
-module.exports = function(config) {
-  var configuration = {
-    frameworks: ['mocha', 'browserify'],
-    browsers: ['PhantomJS'],
-    preprocessors: {
-      '/**/*.browserify': 'browserify'
-    },
-    browserify: {
+module.exports = function (config){
+    config.set({
+      frameworks: ['browserify', 'mocha', 'chai'],
+      browsers: ['PhantomJS'],
+      plugins : [
+        'karma-phantomjs-launcher',
+        'karma-mocha-reporter',
+        'karma-browserify',
+        'karma-mocha',
+        'karma-chai'
+      ],
       files: [
         'test/test-setup.js',
-        'test/**/*-spec.js'
+        'test/*-spec.js'
       ],
-      debug: true,
-      watch: true
-    },
-    urlRoot: '/karma/',
-    reporters : ['spec'],
-    singleRun: true
-  };
-
-  config.set(configuration);
+      preprocessors: {
+        'test/**/*.js': ['browserify']
+      },
+      reporters : ['mocha'],
+      colors: true,
+      autoWatch: false,
+      singleRun: true,
+      logLevel: config.LOG_INFO
+  });
 };
