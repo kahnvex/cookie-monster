@@ -32,26 +32,24 @@ var bake = function (doc){
     },
     removeItem: function (key){
       doc.cookie = key + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-      return true;
     },
     clear: function (){
       var cookiesSplat = doc.cookie.split(/;\s*/);
       for (var i = 0; i < cookiesSplat.length; i++) {
         self.removeItem(decodeURIComponent(cookiesSplat[i].split('=')[0]));
       }
-      return true;
     },
     // Legacy aliases
     get: function (key){
-      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      console.log('cookieMonster.get is deprecated and will be removed in a future version.');
       return self.getItem(key);
     },
     set: function (key, value, opts){
-      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      console.log('cookieMonster.set is deprecated and will be removed in a future version.');
       return self.setItem(key, value, opts);
     },
     remove: function (key){
-      console.log('This method is going to be deprecated soon. Please, switch to using Storage API compatible method.');
+      console.log('cookieMonster.remove is deprecated and will be removed in a future version.');
       return self.removeItem(key);
     }
   };
