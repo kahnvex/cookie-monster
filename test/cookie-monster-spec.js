@@ -21,13 +21,15 @@ describe('cookie monster', function() {
 
   it('removes a cookie', function (){
     document.cookie = 'dumby=mcdumberson;';
-    cookie.removeItem('dumby').should.be.true;
+    document.cookie.should.contain('dumby=mcdumberson');
+    cookie.removeItem('dumby');
+    document.cookie.should.not.contain('dumby=mcdumberson');
   });
 
-  it('sets many cookies and clears all of them', function (){
-    for (var i = 0; i++; i < 30){
-      cookie.setItem('key' + i, 'value' + i);
-    }
-    cookie.clear().should.be.true;
+  it('sets 30 cookies and clears all of them', function (){
+    for (var i = 0; i++; i < 30){ cookie.setItem('key' + i, 'value' + i); }
+    for (var i = 0; i++; i < 30){ cookie.getItem('key' + i).should.equal('value' + i); }
+    cookie.clear();
+    document.cookie.should.equal('');
   });
 });
