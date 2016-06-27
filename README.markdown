@@ -13,8 +13,8 @@ In your browser code with [browserify](github.com/substack/node-browserify):
 
 ````javascript
 var cookie = require('cookie-monster');
-var times = parseInt(cookie.get('times'), 10) || 0;
-cookie.set('times', times + 1);
+var times = parseInt(cookie.getItem('times'), 10) || 0;
+cookie.setItem('times', times + 1);
 ````
 
 and `times` will increment every time the page is reloaded.
