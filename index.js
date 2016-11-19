@@ -25,7 +25,7 @@ var bake = function (doc){
       if (opts.hasOwnProperty('expires')) newCookie += '; expires=' + opts.expires;
       if (opts.hasOwnProperty('path')) newCookie += '; path=' + opts.path;
       if (opts.hasOwnProperty('domain')) newCookie += '; domain=' + opts.domain;
-      if (opts.hasOwnProperty('secure')) newCookie += '; secure';
+      if (opts.secure) newCookie += '; secure';
 
       doc.cookie = newCookie;
       return newCookie;
